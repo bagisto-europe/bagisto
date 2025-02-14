@@ -1,4 +1,4 @@
-name: Linting Tests
+name: Auto Commits
 
 on: [push, pull_request]
 
@@ -6,7 +6,7 @@ permissions:
   contents: write
 
 jobs:
-  linting_tests:
+  auto_commits:
     runs-on: ${{ matrix.operating-systems }}
 
     strategy:

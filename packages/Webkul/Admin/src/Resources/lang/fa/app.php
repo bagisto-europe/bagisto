@@ -1765,6 +1765,44 @@ return [
             ],
         ],
 
+        'gdpr' => [
+            'index' => [
+                'title' => 'درخواست GDPR',
+
+                'datagrid' => [
+                    'completed'     => 'تکمیل شده',
+                    'created-at'    => 'ایجاد شده در',
+                    'customer-name' => 'نام مشتری',
+                    'declined'      => 'رد شده',
+                    'delete'        => 'حذف',
+                    'edit'          => 'ویرایش',
+                    'id'            => 'شناسه',
+                    'message'       => 'پیام',
+                    'pending'       => 'در انتظار',
+                    'processing'    => 'در حال پردازش',
+                    'status'        => 'وضعیت',
+                    'type'          => 'نوع',
+                ],
+
+                'modal' => [
+                    'completed'  => 'تکمیل شده',
+                    'declined'   => 'رد شده',
+                    'pending'    => 'در انتظار',
+                    'processing' => 'در حال پردازش',
+                    'status'     => 'وضعیت',
+                    'title'      => 'ویرایش درخواست داده GDPR',
+                    'type'       => 'نوع',
+                    'message'    => 'پیام',
+                    'save-btn'   => 'ذخیره',
+                ],
+
+                'update-success'              => 'درخواست داده با موفقیت به‌روزرسانی شد و ایمیل به مشتری ارسال شد.',
+                'delete-success'              => 'درخواست داده با موفقیت حذف شد.',
+                'attribute-reason-error'      => 'امکان حذف وجود ندارد.',
+                'update-success-unsent-email' => 'درخواست داده با موفقیت به‌روزرسانی شد اما ایمیل به مشتری ارسال نشد.',
+            ],
+        ],
+
         'reviews' => [
             'index' => [
                 'date'        => 'تاریخ',
@@ -2627,6 +2665,7 @@ return [
                     'general'           => 'عمومی',
                     'group-separator'   => 'جداکننده گروه',
                     'name'              => 'نام',
+                    'separator-note'    => 'فیلد :attribute فقط می‌تواند از عملگرهای کاما (,) و نقطه (.) استفاده کند',
                     'save-btn'          => 'ذخیره ارز',
                     'symbol'            => 'نماد',
                     'title'             => 'ساخت ارز جدید',
@@ -3182,17 +3221,18 @@ return [
                 'title'      => 'تم‌ها',
 
                 'datagrid' => [
-                    'active'       => 'فعال',
-                    'channel_name' => 'نام کانال',
-                    'delete'       => 'حذف',
-                    'id'           => 'شناسه',
-                    'inactive'     => 'غیرفعال',
-                    'name'         => 'نام',
-                    'sort-order'   => 'ترتیب مرتب‌سازی',
-                    'status'       => 'وضعیت',
-                    'theme'        => 'موضوع',
-                    'type'         => 'نوع',
-                    'view'         => 'مشاهده',
+                    'active'        => 'فعال',
+                    'channel_name'  => 'نام کانال',
+                    'change-status' => 'تغییر وضعیت',
+                    'delete'        => 'حذف',
+                    'id'            => 'شناسه',
+                    'inactive'      => 'غیرفعال',
+                    'name'          => 'نام',
+                    'sort-order'    => 'ترتیب مرتب‌سازی',
+                    'status'        => 'وضعیت',
+                    'theme'         => 'موضوع',
+                    'type'          => 'نوع',
+                    'view'          => 'مشاهده',
                 ],
             ],
 
@@ -3667,6 +3707,46 @@ return [
                         'title'    => 'صفحات CMS',
                         'priority' => 'اولویت',
                     ],
+                ],
+            ],
+
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'تنظیمات GDPR',
+                    'info'    => 'تنظیمات GDPR',
+                    'enabled' => 'فعال شده',
+                ],
+
+                'agreement' => [
+                    'title'          => 'توافق GDPR',
+                    'info'           => 'توافق GDPR',
+                    'enable'         => 'فعال کردن توافق مشتری',
+                    'checkbox-label' => 'برچسب چک‌باکس توافق',
+                    'content'        => 'محتوای توافق',
+                ],
+
+                'cookie' => [
+                    'title'        => 'تنظیمات پیام کوکی',
+                    'info'         => 'تنظیمات پیام کوکی',
+                    'enable'       => 'فعال کردن اعلان کوکی',
+                    'position'     => 'موقعیت نمایش بلوک کوکی',
+                    'bottom-left'  => 'پایین چپ',
+                    'bottom-right' => 'پایین راست',
+                    'identifier'   => 'شناسه بلوک استاتیک',
+                    'description'  => 'توضیحات',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'ترجیحات رضایت کوکی شما',
+                    'info'                   => 'ترجیحات رضایت کوکی شما',
+                    'strictly-necessary'     => 'کاملاً ضروری',
+                    'basic-interaction'      => 'تعاملات و عملکردهای پایه',
+                    'experience-enhancement' => 'بهبود تجربه',
+                    'measurement'            => 'اندازه‌گیری‌ها',
+                    'targeting-advertising'  => 'هدف‌گیری و تبلیغات',
                 ],
             ],
 
@@ -4322,6 +4402,7 @@ return [
                 'transactions'             => 'تراکنش‌ها',
                 'url-rewrites'             => 'بازنویسی URL',
                 'users'                    => 'کاربران',
+                'gdpr-data-requests'       => 'درخواست‌های داده GDPR',
             ],
 
             'powered-by' => [
@@ -4635,6 +4716,10 @@ return [
                 'greeting'    => 'ما به مشتری جدید، :customer_name که به تازگی با ما ثبت نام کرده است، خوش آمد می گوییم!',
                 'subject'     => 'ثبت نام مشتری جدید',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'وضعیت درخواست GDPR شما',
         ],
 
         'orders' => [

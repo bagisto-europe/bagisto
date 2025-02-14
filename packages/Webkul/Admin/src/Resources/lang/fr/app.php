@@ -1765,6 +1765,44 @@ return [
             ],
         ],
 
+        'gdpr' => [
+            'index' => [
+                'title' => 'Demande RGPD',
+
+                'datagrid' => [
+                    'completed'     => 'Terminé',
+                    'created-at'    => 'Créé à',
+                    'customer-name' => 'Nom du client',
+                    'declined'      => 'Refusé',
+                    'delete'        => 'Supprimer',
+                    'edit'          => 'Modifier',
+                    'id'            => 'ID',
+                    'message'       => 'Message',
+                    'pending'       => 'En attente',
+                    'processing'    => 'En traitement',
+                    'status'        => 'Statut',
+                    'type'          => 'Type',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Terminé',
+                    'declined'   => 'Refusé',
+                    'pending'    => 'En attente',
+                    'processing' => 'En traitement',
+                    'status'     => 'Statut',
+                    'title'      => 'Modifier la demande de données RGPD',
+                    'type'       => 'Type',
+                    'message'    => 'Message',
+                    'save-btn'   => 'Enregistrer',
+                ],
+
+                'update-success'              => 'Demande de données mise à jour avec succès et e-mail envoyé au client.',
+                'delete-success'              => 'Demande de données supprimée avec succès.',
+                'attribute-reason-error'      => 'Impossible de supprimer.',
+                'update-success-unsent-email' => 'Demande de données mise à jour avec succès mais e-mail non envoyé au client.',
+            ],
+        ],
+
         'reviews' => [
             'index' => [
                 'date'        => 'Date',
@@ -2627,6 +2665,7 @@ return [
                     'general'           => 'Général',
                     'group-separator'   => 'Séparateur de Groupe',
                     'name'              => 'Nom',
+                    'separator-note'    => 'Le champ :attribute ne peut accepter que les opérateurs virgule (,) et point (.)',
                     'save-btn'          => 'Enregistrer la devise',
                     'symbol'            => 'Symbole',
                     'title'             => 'Créer une nouvelle devise',
@@ -3182,17 +3221,18 @@ return [
                 'title'      => 'Thèmes',
 
                 'datagrid' => [
-                    'active'       => 'Actif',
-                    'channel_name' => 'Nom du canal',
-                    'delete'       => 'Supprimer',
-                    'id'           => 'ID',
-                    'inactive'     => 'Inactif',
-                    'name'         => 'Nom',
-                    'sort-order'   => 'Ordre de tri',
-                    'status'       => 'Statut',
-                    'theme'        => 'Thème',
-                    'type'         => 'Type',
-                    'view'         => 'Voir',
+                    'active'        => 'Actif',
+                    'channel_name'  => 'Nom du canal',
+                    'change-status' => 'Changer le statut',
+                    'delete'        => 'Supprimer',
+                    'id'            => 'ID',
+                    'inactive'      => 'Inactif',
+                    'name'          => 'Nom',
+                    'sort-order'    => 'Ordre de tri',
+                    'status'        => 'Statut',
+                    'theme'         => 'Thème',
+                    'type'          => 'Type',
+                    'view'          => 'Voir',
                 ],
             ],
 
@@ -3667,6 +3707,46 @@ return [
                         'title'    => 'Pages CMS',
                         'priority' => 'Priorité',
                     ],
+                ],
+            ],
+
+            'gdpr' => [
+                'title' => 'RGPD',
+                'info'  => 'RGPD',
+
+                'settings' => [
+                    'title'   => 'Paramètres RGPD',
+                    'info'    => 'Paramètres RGPD',
+                    'enabled' => 'Activé',
+                ],
+
+                'agreement' => [
+                    'title'          => 'Accord RGPD',
+                    'info'           => 'Accord RGPD',
+                    'enable'         => 'Activer l\'accord client',
+                    'checkbox-label' => 'Étiquette de la case à cocher de l\'accord',
+                    'content'        => 'Contenu de l\'accord',
+                ],
+
+                'cookie' => [
+                    'title'        => 'Paramètres du message de cookie',
+                    'info'         => 'Paramètres du message de cookie',
+                    'enable'       => 'Activer l\'avis de cookie',
+                    'position'     => 'Position d\'affichage du bloc de cookie',
+                    'bottom-left'  => 'En bas à gauche',
+                    'bottom-right' => 'En bas à droite',
+                    'identifier'   => 'Identifiant du bloc statique',
+                    'description'  => 'Description',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'Votre préférence de consentement aux cookies',
+                    'info'                   => 'Votre préférence de consentement aux cookies',
+                    'strictly-necessary'     => 'Strictement nécessaire',
+                    'basic-interaction'      => 'Interactions et fonctionnalités de base',
+                    'experience-enhancement' => 'Améliorations de l\'expérience',
+                    'measurement'            => 'Mesures',
+                    'targeting-advertising'  => 'Ciblage et publicité',
                 ],
             ],
 
@@ -4322,6 +4402,7 @@ return [
                 'transactions'             => 'Transactions',
                 'url-rewrites'             => 'Réécritures d\'URL',
                 'users'                    => 'Utilisateurs',
+                'gdpr-data-requests'       => 'Demandes de données GDPR',
             ],
 
             'powered-by' => [
@@ -4635,6 +4716,10 @@ return [
                 'greeting'    => 'Nous souhaitons la bienvenue au nouveau client, :customer_name qui vient de s`inscrire chez nous !',
                 'subject'     => 'Enregistrement d`un nouveau client',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'Le statut de votre demande GDPR',
         ],
 
         'orders' => [

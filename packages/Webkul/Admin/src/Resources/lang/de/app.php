@@ -1765,6 +1765,44 @@ return [
             ],
         ],
 
+        'gdpr' => [
+            'index' => [
+                'title' => 'DSGVO-Anfrage',
+
+                'datagrid' => [
+                    'completed'     => 'Abgeschlossen',
+                    'created-at'    => 'Erstellt am',
+                    'customer-name' => 'Kundenname',
+                    'declined'      => 'Abgelehnt',
+                    'delete'        => 'Löschen',
+                    'edit'          => 'Bearbeiten',
+                    'id'            => 'ID',
+                    'message'       => 'Nachricht',
+                    'pending'       => 'Ausstehend',
+                    'processing'    => 'In Bearbeitung',
+                    'status'        => 'Status',
+                    'type'          => 'Typ',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Abgeschlossen',
+                    'declined'   => 'Abgelehnt',
+                    'pending'    => 'Ausstehend',
+                    'processing' => 'In Bearbeitung',
+                    'status'     => 'Status',
+                    'title'      => 'DSGVO-Datenanfrage bearbeiten',
+                    'type'       => 'Typ',
+                    'message'    => 'Nachricht',
+                    'save-btn'   => 'Speichern',
+                ],
+
+                'update-success'              => 'Datenanfrage erfolgreich aktualisiert und E-Mail an den Kunden gesendet.',
+                'delete-success'              => 'Datenanfrage erfolgreich gelöscht.',
+                'attribute-reason-error'      => 'Löschen nicht möglich.',
+                'update-success-unsent-email' => 'Datenanfrage erfolgreich aktualisiert, aber E-Mail nicht an den Kunden gesendet.',
+            ],
+        ],
+
         'reviews' => [
             'index' => [
                 'date'        => 'Datum',
@@ -2627,6 +2665,7 @@ return [
                     'general'           => 'Allgemein',
                     'group-separator'   => 'Gruppentrennzeichen',
                     'name'              => 'Name',
+                    'separator-note'    => 'Das :attribute-Feld kann nur die Operatoren Komma (,) und Punkt (.) akzeptieren',
                     'save-btn'          => 'Währung speichern',
                     'symbol'            => 'Symbol',
                     'title'             => 'Neue Währung erstellen',
@@ -3182,17 +3221,18 @@ return [
                 'title'      => 'Themen',
 
                 'datagrid' => [
-                    'active'       => 'Aktiv',
-                    'channel_name' => 'Kanalname',
-                    'delete'       => 'Löschen',
-                    'id'           => 'ID',
-                    'inactive'     => 'Inaktiv',
-                    'name'         => 'Name',
-                    'sort-order'   => 'Sortierreihenfolge',
-                    'status'       => 'Status',
-                    'theme'        => 'Thema',
-                    'type'         => 'Typ',
-                    'view'         => 'Ansehen',
+                    'active'        => 'Aktiv',
+                    'channel_name'  => 'Kanalname',
+                    'change-status' => 'Status ändern',
+                    'delete'        => 'Löschen',
+                    'id'            => 'ID',
+                    'inactive'      => 'Inaktiv',
+                    'name'          => 'Name',
+                    'sort-order'    => 'Sortierreihenfolge',
+                    'status'        => 'Status',
+                    'theme'         => 'Thema',
+                    'type'          => 'Typ',
+                    'view'          => 'Ansehen',
                 ],
             ],
 
@@ -3667,6 +3707,46 @@ return [
                         'title'    => 'CMS-Seiten',
                         'priority' => 'Priorität',
                     ],
+                ],
+            ],
+
+            'gdpr' => [
+                'title' => 'DSGVO',
+                'info'  => 'DSGVO',
+
+                'settings' => [
+                    'title'   => 'DSGVO-Einstellungen',
+                    'info'    => 'DSGVO-Einstellungen',
+                    'enabled' => 'Aktiviert',
+                ],
+
+                'agreement' => [
+                    'title'          => 'DSGVO-Vereinbarung',
+                    'info'           => 'DSGVO-Vereinbarung',
+                    'enable'         => 'Kundenvereinbarung aktivieren',
+                    'checkbox-label' => 'Beschriftung der Vereinbarungs-Checkbox',
+                    'content'        => 'Inhalt der Vereinbarung',
+                ],
+
+                'cookie' => [
+                    'title'        => 'Cookie-Nachricht-Einstellungen',
+                    'info'         => 'Cookie-Nachricht-Einstellungen',
+                    'enable'       => 'Cookie-Hinweis aktivieren',
+                    'position'     => 'Anzeigeposition des Cookie-Blocks',
+                    'bottom-left'  => 'Unten links',
+                    'bottom-right' => 'Unten rechts',
+                    'identifier'   => 'Statischer Block-Identifier',
+                    'description'  => 'Beschreibung',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'Ihre Cookie-Einwilligungspräferenz',
+                    'info'                   => 'Ihre Cookie-Einwilligungspräferenz',
+                    'strictly-necessary'     => 'Unbedingt erforderlich',
+                    'basic-interaction'      => 'Grundlegende Interaktionen & Funktionen',
+                    'experience-enhancement' => 'Erlebnisverbesserungen',
+                    'measurement'            => 'Messungen',
+                    'targeting-advertising'  => 'Targeting & Werbung',
                 ],
             ],
 
@@ -4322,6 +4402,7 @@ return [
                 'transactions'             => 'Transaktionen',
                 'url-rewrites'             => 'URL-Rewrites',
                 'users'                    => 'Benutzer',
+                'gdpr-data-requests'       => 'GDPR-Datenanfragen',
             ],
 
             'powered-by' => [
@@ -4635,6 +4716,10 @@ return [
                 'greeting'    => 'Wir heißen den neuen Kunden :customer_name, der sich gerade bei uns registriert hat, herzlich willkommen!',
                 'subject'     => 'Neukundenregistrierung',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'Ihr GDPR-Anfragestatus',
         ],
 
         'orders' => [

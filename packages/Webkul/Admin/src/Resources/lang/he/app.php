@@ -1765,6 +1765,44 @@ return [
             ],
         ],
 
+        'gdpr' => [
+            'index' => [
+                'title' => 'בקשת GDPR',
+
+                'datagrid' => [
+                    'completed'     => 'הושלם',
+                    'created-at'    => 'נוצר בתאריך',
+                    'customer-name' => 'שם הלקוח',
+                    'declined'      => 'נדחה',
+                    'delete'        => 'מחק',
+                    'edit'          => 'ערוך',
+                    'id'            => 'מזהה',
+                    'message'       => 'הודעה',
+                    'pending'       => 'ממתין',
+                    'processing'    => 'מעבד',
+                    'status'        => 'סטטוס',
+                    'type'          => 'סוג',
+                ],
+
+                'modal' => [
+                    'completed'  => 'הושלם',
+                    'declined'   => 'נדחה',
+                    'pending'    => 'ממתין',
+                    'processing' => 'מעבד',
+                    'status'     => 'סטטוס',
+                    'title'      => 'ערוך בקשת נתוני GDPR',
+                    'type'       => 'סוג',
+                    'message'    => 'הודעה',
+                    'save-btn'   => 'שמור',
+                ],
+
+                'update-success'              => 'בקשת הנתונים עודכנה בהצלחה ואימייל נשלח ללקוח.',
+                'delete-success'              => 'בקשת הנתונים נמחקה בהצלחה.',
+                'attribute-reason-error'      => 'לא ניתן למחוק.',
+                'update-success-unsent-email' => 'בקשת הנתונים עודכנה בהצלחה אך האימייל לא נשלח ללקוח.',
+            ],
+        ],
+
         'reviews' => [
             'index' => [
                 'date'        => 'תאריך',
@@ -2627,6 +2665,7 @@ return [
                     'general'           => 'כללי',
                     'group-separator'   => 'מפריד קבוצה',
                     'name'              => 'שם',
+                    'separator-note'    => 'השדה :attribute יכול לקבל רק את המפעילים פסיק (,) ונקודה (.)',
                     'save-btn'          => 'שמור מטבע',
                     'symbol'            => 'סמל',
                     'title'             => 'צור מטבע חדש',
@@ -3182,17 +3221,18 @@ return [
                 'title'      => 'ערכות עיצוב',
 
                 'datagrid' => [
-                    'active'       => 'פעיל',
-                    'channel_name' => 'שם הערוץ',
-                    'delete'       => 'מחק',
-                    'id'           => 'מזהה',
-                    'inactive'     => 'לא פעיל',
-                    'name'         => 'שם',
-                    'sort-order'   => 'סדר מיון',
-                    'status'       => 'סטטוס',
-                    'theme'        => 'נושא',
-                    'type'         => 'סוג',
-                    'view'         => 'הצג',
+                    'active'        => 'פעיל',
+                    'channel_name'  => 'שם הערוץ',
+                    'change-status' => 'שנה סטטוס',
+                    'delete'        => 'מחק',
+                    'id'            => 'מזהה',
+                    'inactive'      => 'לא פעיל',
+                    'name'          => 'שם',
+                    'sort-order'    => 'סדר מיון',
+                    'status'        => 'סטטוס',
+                    'theme'         => 'נושא',
+                    'type'          => 'סוג',
+                    'view'          => 'הצג',
                 ],
             ],
 
@@ -3667,6 +3707,46 @@ return [
                         'title'    => 'עמודי CMS',
                         'priority' => 'עדיפות',
                     ],
+                ],
+            ],
+
+            'gdpr' => [
+                'title' => 'GDPR',
+                'info'  => 'GDPR',
+
+                'settings' => [
+                    'title'   => 'הגדרות GDPR',
+                    'info'    => 'הגדרות GDPR',
+                    'enabled' => 'מופעל',
+                ],
+
+                'agreement' => [
+                    'title'          => 'הסכם GDPR',
+                    'info'           => 'הסכם GDPR',
+                    'enable'         => 'אפשר הסכם לקוח',
+                    'checkbox-label' => 'תווית תיבת הסימון להסכם',
+                    'content'        => 'תוכן ההסכם',
+                ],
+
+                'cookie' => [
+                    'title'        => 'הגדרות הודעת עוגיות',
+                    'info'         => 'הגדרות הודעת עוגיות',
+                    'enable'       => 'אפשר הודעת עוגיות',
+                    'position'     => 'מיקום תצוגת בלוק העוגיות',
+                    'bottom-left'  => 'תחתון שמאלי',
+                    'bottom-right' => 'תחתון ימני',
+                    'identifier'   => 'מזהה בלוק סטטי',
+                    'description'  => 'תיאור',
+                ],
+
+                'cookie-consent' => [
+                    'title'                  => 'העדפת הסכמת העוגיות שלך',
+                    'info'                   => 'העדפת הסכמת העוגיות שלך',
+                    'strictly-necessary'     => 'הכרחי בהחלט',
+                    'basic-interaction'      => 'אינטראקציות בסיסיות ופונקציות',
+                    'experience-enhancement' => 'שיפורי חוויה',
+                    'measurement'            => 'מדידות',
+                    'targeting-advertising'  => 'מיקוד ופרסום',
                 ],
             ],
 
@@ -4314,7 +4394,7 @@ return [
                 'search-terms'             => 'מונחים לחיפוש',
                 'settings'                 => 'הגדרות',
                 'shipments'                => 'משלוחים',
-                'sitemaps'                 => 'מפותרכים',
+                'sitemaps'                 => 'מפות אתר',
                 'tax-categories'           => 'קטגוריות מס',
                 'tax-rates'                => 'שערי מס',
                 'taxes'                    => 'מיסים',
@@ -4322,6 +4402,7 @@ return [
                 'transactions'             => 'עסקאות',
                 'url-rewrites'             => 'כתיבת URL מחדש',
                 'users'                    => 'משתמשים',
+                'gdpr-data-requests'       => 'בקשות נתוני GDPR',
             ],
 
             'powered-by' => [
@@ -4635,6 +4716,10 @@ return [
                 'greeting'    => 'אנו מקבלים בברכה את הלקוח החדש, :customer_name שזה עתה נרשם אלינו!',
                 'subject'     => 'רישום לקוח חדש',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'מצב בקשת ה-GDPR שלך',
         ],
 
         'orders' => [

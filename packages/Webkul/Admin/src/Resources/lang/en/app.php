@@ -1401,11 +1401,11 @@ return [
             ],
 
             'category'             => 'Category',
-            'create-success'       => 'category created successfully.',
+            'create-success'       => 'Category created successfully.',
             'delete-category-root' => 'The Root category can not be deleted.',
             'delete-failed'        => 'Error encountered while deleting category',
             'delete-success'       => 'The category has been successfully deleted.',
-            'update-success'       => 'category updated successfully.',
+            'update-success'       => 'Category updated successfully.',
         ],
 
         'families' => [
@@ -1762,6 +1762,44 @@ return [
                     'id'     => 'ID',
                     'name'   => 'Name',
                 ],
+            ],
+        ],
+
+        'gdpr' => [
+            'index' => [
+                'title' => 'GDPR Request',
+
+                'datagrid' => [
+                    'completed'     => 'Completed',
+                    'created-at'    => 'Created At',
+                    'customer-name' => 'Customer Name',
+                    'declined'      => 'Declined',
+                    'delete'        => 'Delete',
+                    'edit'          => 'Edit',
+                    'id'            => 'ID',
+                    'message'       => 'Message',
+                    'pending'       => 'Pending',
+                    'processing'    => 'Processing',
+                    'status'        => 'Status',
+                    'type'          => 'Type',
+                ],
+
+                'modal' => [
+                    'completed'  => 'Completed',
+                    'declined'   => 'Declined',
+                    'pending'    => 'Pending',
+                    'processing' => 'Processing',
+                    'status'     => 'Status',
+                    'title'      => 'Edit GDPR Data Request',
+                    'type'       => 'Type',
+                    'message'    => 'Message',
+                    'save-btn'   => 'Save',
+                ],
+
+                'update-success'              => 'Data Request updated successfully and Email Sent to Customer.',
+                'delete-success'              => 'Data Request deleted successfully.',
+                'attribute-reason-error'      => 'Unable to Delete.',
+                'update-success-unsent-email' => 'Data Request updated successfully But Email unsent to Customer.',
             ],
         ],
 
@@ -2627,6 +2665,7 @@ return [
                     'general'           => 'General',
                     'group-separator'   => 'Group Separator',
                     'name'              => 'Name',
+                    'separator-note'    => 'The :attribute field can only accept the comma (,) and dot (.) operators',
                     'save-btn'          => 'Save Currency',
                     'symbol'            => 'Symbol',
                     'title'             => 'Create New Currency',
@@ -3182,17 +3221,18 @@ return [
                 'title'      => 'Themes',
 
                 'datagrid' => [
-                    'active'       => 'Active',
-                    'channel_name' => 'Channel Name',
-                    'delete'       => 'Delete',
-                    'id'           => 'Id',
-                    'inactive'     => 'Inactive',
-                    'name'         => 'Name',
-                    'sort-order'   => 'Sort Order',
-                    'status'       => 'Status',
-                    'theme'        => 'Theme',
-                    'type'         => 'Type',
-                    'view'         => 'View',
+                    'active'        => 'Active',
+                    'channel_name'  => 'Channel Name',
+                    'change-status' => 'Change status',
+                    'delete'        => 'Delete',
+                    'id'            => 'Id',
+                    'inactive'      => 'Inactive',
+                    'name'          => 'Name',
+                    'sort-order'    => 'Sort Order',
+                    'status'        => 'Status',
+                    'theme'         => 'Theme',
+                    'type'          => 'Type',
+                    'view'          => 'View',
                 ],
             ],
 
@@ -3564,6 +3604,47 @@ return [
                         'title'             => 'Personalized Checkout Message',
                         'title-info'        => 'Craft a personalized checkout message for customers on the Thank-You page, tailoring the content to resonate with individual preferences and enhancing the overall post-purchase experience.',
                         'vicuna'            => 'Vicuna',
+                    ],
+                ],
+
+                'gdpr' => [
+                    'title' => 'GDPR',
+                    'info'  => 'GDPR',
+
+                    'settings' => [
+                        'title'   => 'GDPR Settings',
+                        'info'    => 'GDPR Settings',
+                        'enabled' => 'Enabled',
+                    ],
+
+                    'agreement' => [
+                        'title'          => 'GDPR Agreement',
+                        'info'           => 'GDPR Agreement',
+                        'enable'         => 'Enable Customer Agreement',
+                        'checkbox-label' => 'Agreement Checkbox Label',
+                        'content'        => 'Agreement Content',
+                    ],
+
+                    'cookie' => [
+                        'title'        => 'Cookie Message Settings',
+                        'info'         => 'Cookie Message Settings',
+                        'enable'       => 'Enable Cookie Notice',
+                        'position'     => 'Cookie Block Display Position',
+                        'bottom-left'  => ' Bottom Left',
+                        'bottom-right' => ' Bottom Right',
+                        'identifier'   => 'Static Block Identifier',
+                        'description'  => 'Description',
+                    ],
+
+                    'cookie-consent' => [
+                        'title'                  => 'Your Cookie Consent Preference',
+                        'info'                   => ' Your Cookie Consent Preference',
+                        'strictly-necessary'     => 'Strictly Necessary',
+                        'basic-interaction'      => 'Basic Interactions & Functionalities',
+                        'experience-enhancement' => 'Experience Enhancements',
+                        'measurement'            => 'Measurements',
+                        'targeting-advertising'  => 'Targeting & Advertising',
+
                     ],
                 ],
 
@@ -4322,6 +4403,7 @@ return [
                 'transactions'             => 'Transactions',
                 'url-rewrites'             => 'URL Rewrites',
                 'users'                    => 'Users',
+                'gdpr-data-requests'       => 'GDPR Data Requests',
             ],
 
             'powered-by' => [
@@ -4635,6 +4717,10 @@ return [
                 'greeting'    => 'We extend a warm welcome to the new customer, :customer_name who has just registered with us!',
                 'subject'     => 'New Customer Registration',
             ],
+        ],
+
+        'gdpr' => [
+            'status' => 'Your GDPR Request Status',
         ],
 
         'orders' => [
