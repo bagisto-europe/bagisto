@@ -6,7 +6,6 @@
     <a href="https://packagist.org/packages/bagisto/bagisto"><img src="https://poser.pugx.org/bagisto/bagisto/d/total.svg" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/bagisto/bagisto"><img src="https://poser.pugx.org/bagisto/bagisto/v/stable.svg" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/bagisto/bagisto"><img src="https://poser.pugx.org/bagisto/bagisto/license.svg" alt="License"></a>
-    <a href="https://github.com/bagisto/bagisto/actions"><img src="https://github.com/bagisto/bagisto/workflows/CI/badge.svg" alt="Backers on Open Collective"></a>
     <a href="#backers"><img src="https://opencollective.com/bagisto/backers/badge.svg" alt="Backers on Open Collective"></a>
     <a href="#sponsors"><img src="https://opencollective.com/bagisto/sponsors/badge.svg" alt="Sponsors on Open Collective"></a>
     <a href="https://www.codetriage.com/bagisto/bagisto"><img src="https://www.codetriage.com/bagisto/bagisto/badges/users.svg" alt="Open Source Helpers"></a>
@@ -121,7 +120,7 @@ Get Bagisto support on [Facebook Group](https://www.facebook.com/groups/bagisto)
 Would like to help us build the most developer-friendly E-Commerce platform? Start by reading our [Contributing Guide](https://github.com/bagisto/bagisto/blob/master/.github/CONTRIBUTING.md)!
 
 # License
-Bagisto is a truly open-source laravel eCommerce framework that will always be free under the [OSL-3.0 License](https://github.com/bagisto/bagisto/blob/master/LICENSE.txt).
+Bagisto is a fully open-source Laravel eCommerce framework that will always remain free under the [MIT License](https://github.com/bagisto/bagisto/blob/master/LICENSE).
 
 # Security Vulnerabilities
 If you think that you have found a security issue in Bagisto, please do not use the issue tracker and do not post it publicly. Instead, all security issues must be sent to [mailto:support@bagisto.com](mailto:support@bagisto.com).
