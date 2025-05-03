@@ -581,15 +581,20 @@ return [
                 'title' => 'Faktury',
 
                 'datagrid' => [
-                    'action'       => 'Akcje',
-                    'grand-total'  => 'Razem',
-                    'id'           => 'ID',
-                    'invoice-date' => 'Data faktury',
-                    'order-id'     => 'ID zamówienia',
-                    'overdue'      => 'Zaległe',
-                    'paid'         => 'Opłacone',
-                    'pending'      => 'Oczekujące',
-                    'status'       => 'Status',
+                    'action'              => 'Akcje',
+                    'days-left'           => 'Pozostało :count dzień/dni',
+                    'days-overdue'        => ':count dzień/dni opóźnienia',
+                    'grand-total'         => 'Razem',
+                    'id'                  => 'ID',
+                    'invoice-date'        => 'Data faktury',
+                    'mass-update-success' => 'Wybrane faktury zostały pomyślnie zaktualizowane.',
+                    'order-id'            => 'ID zamówienia',
+                    'overdue'             => 'Zaległe',
+                    'overdue-by'          => 'Spóźnione o :count dzień/dni',
+                    'paid'                => 'Opłacone',
+                    'pending'             => 'Oczekujące',
+                    'status'              => 'Status',
+                    'update-status'       => 'Zaktualizuj status',
                 ],
             ],
 
@@ -4163,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'Włącz Facebook',
-                        'enable-github'     => 'Włącz GitHub',
-                        'enable-google'     => 'Włącz Google',
-                        'enable-linkedin'   => 'Włącz LinkedIn',
-                        'enable-twitter'    => 'Włącz Twitter',
-                        'social-login'      => 'Logowanie społecznościowe',
-                        'social-login-info' => '"Logowanie społecznościowe" umożliwia użytkownikom dostęp do witryn za pomocą swoich kont w mediach społecznościowych, upraszczając proces rejestracji i logowania dla wygody.',
+                        'title' => 'Logowanie Społecznościowe',
+                        'info'  => '"Logowanie społecznościowe" umożliwia użytkownikom dostęp do witryny za pomocą kont mediów społecznościowych, upraszczając proces rejestracji i logowania.',
+
+                        'google' => [
+                            'enable-google' => 'Włącz Google',
+
+                            'client-id' => [
+                                'title'      => 'ID klienta',
+                                'title-info' => 'Unikalny identyfikator przyznany przez Google podczas tworzenia aplikacji OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Sekret klienta',
+                                'title-info' => 'Tajny klucz powiązany z klientem OAuth Google. Zachowaj go w tajemnicy.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL przekierowania',
+                                'title-info' => 'Adres URL przekierowania, na który użytkownicy są wysyłani po uwierzytelnieniu przez Google. Musi być zgodny z adresem skonfigurowanym w konsoli Google.',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'Włącz Facebook',
+
+                            'client-id' => [
+                                'title'      => 'ID klienta',
+                                'title-info' => 'ID aplikacji przyznane przez Facebook podczas tworzenia aplikacji w konsoli deweloperskiej Facebooka.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Sekret klienta',
+                                'title-info' => 'Tajny klucz powiązany z aplikacją Facebook. Zachowaj go w bezpieczeństwie i prywatności.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL przekierowania',
+                                'title-info' => 'Adres URL przekierowania po uwierzytelnieniu przez Facebook. Musi być zgodny z adresem skonfigurowanym w ustawieniach aplikacji Facebook.',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'Włącz GitHub',
+
+                            'client-id' => [
+                                'title'      => 'ID klienta',
+                                'title-info' => 'Unikalny identyfikator przyznany przez GitHub podczas tworzenia aplikacji OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Sekret klienta',
+                                'title-info' => 'Tajny klucz powiązany z klientem OAuth GitHub. Zachowaj go w tajemnicy.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL przekierowania',
+                                'title-info' => 'Adres URL przekierowania po uwierzytelnieniu przez GitHub. Musi być zgodny z adresem skonfigurowanym w konsoli GitHub.',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'Włącz LinkedIn',
+
+                            'client-id' => [
+                                'title'      => 'ID klienta',
+                                'title-info' => 'Unikalny identyfikator przyznany przez LinkedIn podczas tworzenia aplikacji OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Sekret klienta',
+                                'title-info' => 'Tajny klucz powiązany z klientem OAuth LinkedIn. Zachowaj go w tajemnicy.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL przekierowania',
+                                'title-info' => 'Adres URL przekierowania po uwierzytelnieniu przez LinkedIn. Musi być zgodny z adresem skonfigurowanym w konsoli LinkedIn.',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'Włącz Twitter',
+
+                            'client-id' => [
+                                'title'      => 'ID klienta',
+                                'title-info' => 'Unikalny identyfikator przyznany przez Twitter podczas tworzenia aplikacji OAuth.',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'Sekret klienta',
+                                'title-info' => 'Tajny klucz powiązany z klientem OAuth Twitter. Zachowaj go w tajemnicy.',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'URL przekierowania',
+                                'title-info' => 'Adres URL przekierowania po uwierzytelnieniu przez Twitter. Musi być zgodny z adresem skonfigurowanym w konsoli Twitter.',
+                            ],
+                        ],
                     ],
                 ],
             ],

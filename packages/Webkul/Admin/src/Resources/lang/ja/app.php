@@ -581,15 +581,20 @@ return [
                 'title' => '請求書',
 
                 'datagrid' => [
-                    'action'       => 'アクション',
-                    'grand-total'  => '総合計',
-                    'id'           => 'ID',
-                    'invoice-date' => '請求書の日付',
-                    'order-id'     => '注文ID',
-                    'overdue'      => '延滞',
-                    'paid'         => '支払済み',
-                    'pending'      => '保留中',
-                    'status'       => 'ステータス',
+                    'action'              => 'アクション',
+                    'days-left'           => '残り :count 日',
+                    'days-overdue'        => ':count 日遅れ',
+                    'grand-total'         => '総合計',
+                    'id'                  => 'ID',
+                    'invoice-date'        => '請求書の日付',
+                    'mass-update-success' => '選択された請求書が正常に更新されました。',
+                    'order-id'            => '注文ID',
+                    'overdue'             => '延滞',
+                    'overdue-by'          => ':count 日遅れ',
+                    'paid'                => '支払済み',
+                    'pending'             => '保留中',
+                    'status'              => 'ステータス',
+                    'update-status'       => 'ステータスを更新',
                 ],
             ],
 
@@ -4163,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => 'Facebookを有効にする',
-                        'enable-github'     => 'GitHubを有効にする',
-                        'enable-google'     => 'Googleを有効にする',
-                        'enable-linkedin'   => 'LinkedInを有効にする',
-                        'enable-twitter'    => 'Twitterを有効にする',
-                        'social-login'      => 'ソーシャルログイン',
-                        'social-login-info' => '「ソーシャルログイン」は、ユーザーがソーシャルメディアアカウントを使用してウェブサイトにアクセスできるようにすることで、登録とログインのプロセスを簡素化します。',
+                        'title' => 'ソーシャルログイン',
+                        'info'  => '「ソーシャルログイン」とは、ユーザーがソーシャルメディアアカウントを使ってウェブサイトにアクセスできる機能で、登録やログインのプロセスを簡略化します。',
+
+                        'google' => [
+                            'enable-google' => 'Googleを有効にする',
+
+                            'client-id' => [
+                                'title'      => 'クライアントID',
+                                'title-info' => 'OAuthアプリケーションを作成する際にGoogleから提供される一意の識別子です。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'クライアントシークレット',
+                                'title-info' => 'Google OAuthクライアントに関連付けられた秘密鍵です。安全に保管してください。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'リダイレクトURL',
+                                'title-info' => 'Google認証後にユーザーがリダイレクトされるコールバックURL。Googleコンソールに設定したURLと一致する必要があります。',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => 'Facebookを有効にする',
+
+                            'client-id' => [
+                                'title'      => 'クライアントID',
+                                'title-info' => 'Facebook開発者コンソールでアプリ作成時に提供されるアプリIDです。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'クライアントシークレット',
+                                'title-info' => 'Facebookアプリに関連付けられたシークレットキー。安全かつ秘密に保管してください。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'リダイレクトURL',
+                                'title-info' => 'Facebook認証後にユーザーがリダイレクトされるコールバックURL。Facebookアプリの設定に登録されたURLと一致する必要があります。',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => 'GitHubを有効にする',
+
+                            'client-id' => [
+                                'title'      => 'クライアントID',
+                                'title-info' => 'GitHubでOAuthアプリケーションを作成する際に提供される一意の識別子です。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'クライアントシークレット',
+                                'title-info' => 'GitHub OAuthクライアントに関連付けられた秘密鍵。安全に保管してください。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'リダイレクトURL',
+                                'title-info' => 'GitHub認証後にユーザーがリダイレクトされるコールバックURL。GitHubコンソールに設定されたURLと一致する必要があります。',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => 'LinkedInを有効にする',
+
+                            'client-id' => [
+                                'title'      => 'クライアントID',
+                                'title-info' => 'OAuthアプリケーション作成時にLinkedInから提供される一意の識別子です。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'クライアントシークレット',
+                                'title-info' => 'LinkedIn OAuthクライアントに関連する秘密鍵。安全に保管してください。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'リダイレクトURL',
+                                'title-info' => 'LinkedIn認証後にユーザーがリダイレクトされるコールバックURL。LinkedInコンソールに設定されたURLと一致する必要があります。',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => 'Twitterを有効にする',
+
+                            'client-id' => [
+                                'title'      => 'クライアントID',
+                                'title-info' => 'TwitterでOAuthアプリケーションを作成する際に提供される一意の識別子です。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => 'クライアントシークレット',
+                                'title-info' => 'Twitter OAuthクライアントに関連付けられた秘密鍵。安全に保管してください。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => 'リダイレクトURL',
+                                'title-info' => 'Twitter認証後にユーザーがリダイレクトされるコールバックURL。Twitterコンソールに設定されたURLと一致する必要があります。',
+                            ],
+                        ],
                     ],
                 ],
             ],

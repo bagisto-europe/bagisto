@@ -581,15 +581,20 @@ return [
                 'title' => '发票',
 
                 'datagrid' => [
-                    'action'       => '操作',
-                    'grand-total'  => '总计',
-                    'id'           => 'ID',
-                    'invoice-date' => '发票日期',
-                    'order-id'     => '订单ID',
-                    'overdue'      => '逾期',
-                    'paid'         => '已支付',
-                    'pending'      => '待支付',
-                    'status'       => '状态',
+                    'action'              => '操作',
+                    'days-left'           => '还有 :count 天',
+                    'days-overdue'        => '已逾期 :count 天',
+                    'grand-total'         => '总计',
+                    'id'                  => 'ID',
+                    'invoice-date'        => '发票日期',
+                    'mass-update-success' => '所选发票已成功更新。',
+                    'order-id'            => '订单ID',
+                    'overdue'             => '逾期',
+                    'overdue-by'          => '逾期 :count 天',
+                    'paid'                => '已支付',
+                    'pending'             => '待支付',
+                    'status'              => '状态',
+                    'update-status'       => '更新状态',
                 ],
             ],
 
@@ -4163,13 +4168,103 @@ return [
                     ],
 
                     'social-login' => [
-                        'enable-facebook'   => '启用 Facebook',
-                        'enable-github'     => '启用 Github',
-                        'enable-google'     => '启用 Google',
-                        'enable-linkedin'   => '启用 LinkedIn',
-                        'enable-twitter'    => '启用 Twitter',
-                        'social-login'      => '社交登录',
-                        'social-login-info' => '“社交登录”通过让用户使用社交媒体账户访问网站，从而简化了注册和登录流程。',
+                        'title' => '社交登录',
+                        'info'  => '"社交登录"允许用户通过他们的社交媒体账户访问网站，从而简化注册和登录过程。',
+
+                        'google' => [
+                            'enable-google' => '启用Google',
+
+                            'client-id' => [
+                                'title'      => '客户端ID',
+                                'title-info' => 'Google在创建OAuth应用时提供的唯一标识符。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => '客户端密钥',
+                                'title-info' => '与您的Google OAuth客户端相关联的密钥。请保密。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => '重定向URL',
+                                'title-info' => '用户在通过Google认证后被重定向的回调URL。必须与您在Google控制台中配置的URL匹配。',
+                            ],
+                        ],
+
+                        'facebook' => [
+                            'enable-facebook' => '启用Facebook',
+
+                            'client-id' => [
+                                'title'      => '客户端ID',
+                                'title-info' => '在Facebook开发者控制台创建应用时，Facebook提供的应用ID。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => '客户端密钥',
+                                'title-info' => '与您的Facebook应用关联的密钥。请保密。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => '重定向URL',
+                                'title-info' => '用户在通过Facebook认证后被重定向的回调URL。必须与您在Facebook应用设置中配置的URL匹配。',
+                            ],
+                        ],
+
+                        'github' => [
+                            'enable-github' => '启用GitHub',
+
+                            'client-id' => [
+                                'title'      => '客户端ID',
+                                'title-info' => 'GitHub在创建OAuth应用时提供的唯一标识符。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => '客户端密钥',
+                                'title-info' => '与您的GitHub OAuth客户端相关联的密钥。请保密。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => '重定向URL',
+                                'title-info' => '用户在通过GitHub认证后被重定向的回调URL。必须与您在GitHub控制台中配置的URL匹配。',
+                            ],
+                        ],
+
+                        'linkedin' => [
+                            'enable-linkedin' => '启用LinkedIn',
+
+                            'client-id' => [
+                                'title'      => '客户端ID',
+                                'title-info' => 'LinkedIn在创建OAuth应用时提供的唯一标识符。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => '客户端密钥',
+                                'title-info' => '与您的LinkedIn OAuth客户端相关联的密钥。请保密。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => '重定向URL',
+                                'title-info' => '用户在通过LinkedIn认证后被重定向的回调URL。必须与您在LinkedIn控制台中配置的URL匹配。',
+                            ],
+                        ],
+
+                        'twitter' => [
+                            'enable-twitter' => '启用Twitter',
+
+                            'client-id' => [
+                                'title'      => '客户端ID',
+                                'title-info' => 'Twitter在创建OAuth应用时提供的唯一标识符。',
+                            ],
+
+                            'client-secret' => [
+                                'title'      => '客户端密钥',
+                                'title-info' => '与您的Twitter OAuth客户端相关联的密钥。请保密。',
+                            ],
+
+                            'redirect' => [
+                                'title'      => '重定向URL',
+                                'title-info' => '用户在通过Twitter认证后被重定向的回调URL。必须与您在Twitter控制台中配置的URL匹配。',
+                            ],
+                        ],
                     ],
                 ],
             ],
